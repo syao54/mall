@@ -6,6 +6,9 @@
   <div>
     I am learning git.
   </div>
+  <p>
+    haha~~~
+  </p>
   <router-view/>
 </template>
 
