@@ -3,12 +3,6 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-  <div>
-    I am learning git.
-  </div>
-  <p>
-    haha~~~
-  </p>
   <router-view/>
 </template>
 
