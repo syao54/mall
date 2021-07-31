@@ -1,10 +1,10 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 
-const Home=()=>import('views/home/Home')
-const Category=()=>import('views/category/Category')
-const Cart=()=>import('views/cart/Cart')
-const Profile=()=>import('views/profile/Profile')
-// const Detail=()=>import('views/detail/Detail')
+const Home = () => import('views/home/Home')
+const Category = () => import('views/category/Category')
+const Cart = () => import('views/cart/Cart')
+const Profile = () => import('views/profile/Profile')
+const Detail = () => import('views/detail/Detail')
 const routes = [
   {
     path: '/',
@@ -12,7 +12,10 @@ const routes = [
   },
   {
     path: '/home',
-    component: Home
+    component: Home,
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/category',
@@ -24,13 +27,17 @@ const routes = [
   },
   {
     path: '/profile',
-    component: Profile
-  },
+    component: Profile,
 
+  },
+  {
+    path: '/detail/:iid',
+    component: Detail,
+  },
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 

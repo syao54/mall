@@ -14,7 +14,7 @@ export function getRecommend() {
     url: '/recommend'
   })
 }
-
+//ES6语法 创建类
 export class Goods {
   constructor(itemInfo, columns, services) {
     this.title = itemInfo.title;

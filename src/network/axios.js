@@ -21,6 +21,7 @@ export default function axios(option) {
 			// console.log(config);
 
 			// 4.等等
+      //最后必须放行
 			return config
 		}, err => {
 			// console.log('来到了request拦截failure中');

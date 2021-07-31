@@ -5,7 +5,6 @@
          @click="itemClick(index)"
          v-for="(item, index) in titles"
          :key=index>
-
       <span>{{item}}</span>
     </div>
   </div>
@@ -33,6 +32,7 @@
       itemClick: function (index) {
         // 1.改变currentIndex
         this.currentIndex = index;
+        this.$emit('tabClick',index);
 
         // 2.发出事件
         this.$emit('itemClick', index)
